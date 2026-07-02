@@ -13,11 +13,10 @@
     <h1 class="text-4xl font-bold mb-8 text-center">My Personal Dashboard</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
       <!-- Clock -->
       <div class="bg-zinc-900 rounded-2xl p-6">
         <h2 class="text-xl font-semibold mb-4">🕒 Time</h2>
-        <div id="clock" class="text-2xl font-mono"></div>
+        <div id="clock" class="text-sm font-mono leading-tight tracking-tight"></div>
       </div>
 
       <!-- Weather -->
@@ -29,19 +28,43 @@
       <!-- Markets -->
       <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-1">
         <h2 class="text-xl font-semibold mb-4">📈 Markets</h2>
-        <div id="markets" class="space-y-2"></div>
+        <div id="markets" class="space-y-2 text-sm"></div>
       </div>
 
       <!-- Bitcoin Chart -->
       <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-2">
-        <h2 class="text-xl font-semibold mb-4">₿ Bitcoin (7 days)</h2>
+        <h2 class="text-xl font-semibold mb-4">₿ Bitcoin (1 day minutely)</h2>
         <canvas id="btcChart" height="120"></canvas>
       </div>
 
-      <!-- News -->
+      <!-- Top News -->
       <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-3">
         <h2 class="text-xl font-semibold mb-4">📰 Top News</h2>
         <div id="news" class="space-y-3"></div>
+      </div>
+
+      <!-- Sports News -->
+      <div class="bg-zinc-900 rounded-2xl p-6">
+        <h2 class="text-xl font-semibold mb-4">🏈 Sports News</h2>
+        <div id="sportsNews" class="space-y-3"></div>
+      </div>
+
+      <!-- Business News -->
+      <div class="bg-zinc-900 rounded-2xl p-6">
+        <h2 class="text-xl font-semibold mb-4">💼 Business News</h2>
+        <div id="businessNews" class="space-y-3"></div>
+      </div>
+
+      <!-- AI News -->
+      <div class="bg-zinc-900 rounded-2xl p-6">
+        <h2 class="text-xl font-semibold mb-4">🤖 AI News</h2>
+        <div id="aiNews" class="space-y-3"></div>
+      </div>
+
+      <!-- YouTube Topics -->
+      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-3">
+        <h2 class="text-xl font-semibold mb-4">▶️ Topic Videos</h2>
+        <div id="youtubeVideos" class="space-y-6"></div>
       </div>
     </div>
   </div>
