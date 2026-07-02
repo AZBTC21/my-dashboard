@@ -4,28 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Jonathan Hansen's Dashboard</h1>
-    
-    <!-- Time & Weather Row -->
-    <div class="row">
-      <div class="widget" id="clock">Loading times...</div>
-      <div class="widget" id="weather">Loading weather...</div>
-    </div>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+  <div class="max-w-7xl mx-auto p-6">
+    <h1 class="text-4xl font-bold mb-8 text-center">My Personal Dashboard</h1>
 
-    <!-- Markets -->
-    <div class="widget">
-      <h2>Markets</h2>
-      <div id="markets">Loading prices...</div>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Clock -->
+      <div class="bg-zinc-900 rounded-2xl p-6">
+        <h2 class="text-xl font-semibold mb-4">🕒 Time</h2>
+        <div id="clock" class="text-2xl font-mono"></div>
+      </div>
 
-    <!-- News -->
-    <div class="widget">
-      <h2>News</h2>
-      <div id="news">Loading news...</div>
+      <!-- Weather -->
+      <div class="bg-zinc-900 rounded-2xl p-6">
+        <h2 class="text-xl font-semibold mb-4">🌤️ Weather</h2>
+        <div id="weather" class="text-3xl"></div>
+      </div>
+
+      <!-- Markets -->
+      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-1">
+        <h2 class="text-xl font-semibold mb-4">📈 Markets</h2>
+        <div id="markets" class="space-y-2"></div>
+      </div>
+
+      <!-- Bitcoin Chart -->
+      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-2">
+        <h2 class="text-xl font-semibold mb-4">₿ Bitcoin (7 days)</h2>
+        <canvas id="btcChart" height="120"></canvas>
+      </div>
+
+      <!-- News -->
+      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-3">
+        <h2 class="text-xl font-semibold mb-4">📰 Top News</h2>
+        <div id="news" class="space-y-3"></div>
+      </div>
     </div>
   </div>
 
