@@ -15,3 +15,7 @@ body {
   flex: 1;
 }
 h1, h2 { margin: 0 0 15px 0; }
+
+/* Hide horizontal scrollbars for the youtube carousels */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
