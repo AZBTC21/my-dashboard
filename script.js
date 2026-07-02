@@ -12,13 +12,15 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Weather (Change coordinates to your city)
+// Weather for Chandler, Arizona
 async function getWeather() {
-  const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&current_weather=true');
+  const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=33.3062&longitude=-111.8413&current_weather=true');
   const data = await res.json();
+  const tempC = data.current_weather.temperature;
+  const tempF = Math.round((tempC * 9) / 5 + 32);
   document.getElementById('weather').innerHTML = `
-    ${data.current_weather.temperature}°C<br>
-    <span class="text-sm">Feels like ${data.current_weather.temperature}°C</span>
+    Chandler, AZ: <span class="text-sky-300">${tempF}°F</span><br>
+    <span class="text-sm">Feels like ${tempF}°F</span>
   `;
 }
 getWeather();
