@@ -19,3 +19,92 @@ h1, h2 { margin: 0 0 15px 0; }
 /* Hide horizontal scrollbars for the youtube carousels */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.sports-scroll {
+  max-height: 24rem;
+  overflow-y: auto;
+  padding-right: 0.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+.sports-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sports-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+.sports-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.sports-tab {
+  background: rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.sports-tab-active {
+  background: rgba(56, 189, 248, 0.15);
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.sports-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sports-badge-scheduled { background: rgba(59, 130, 246, 0.12); color: #7dd3fc; }
+.sports-badge-live { background: rgba(220, 38, 38, 0.12); color: #fca5a5; }
+.sports-badge-final { background: rgba(34, 197, 94, 0.12); color: #86efac; }
+
+.team-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.league-panel > .section {
+  margin-bottom: 1.5rem;
+}
+
+.standings-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.standings-header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.standings-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+  padding: 1rem;
+}
