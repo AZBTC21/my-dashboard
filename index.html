@@ -31,6 +31,28 @@
         <div id="markets" class="space-y-2 text-sm"></div>
       </div>
 
+      <!-- Sports Scores -->
+      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-3">
+        <h2 class="text-xl font-semibold mb-4">🏟️ Sports Scores</h2>
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div class="flex gap-2">
+            <button id="sportsTabNFL" class="sports-tab sports-tab-active">NFL</button>
+            <button id="sportsTabNBA" class="sports-tab">NBA</button>
+            <button id="sportsTabMLB" class="sports-tab">MLB</button>
+          </div>
+          <div class="text-xs text-zinc-400">
+            <span id="sportsLastUpdated">Updated just now</span>
+            · Refresh every 3m
+          </div>
+        </div>
+        <div id="sportsStatusText" class="text-sm text-zinc-500 mb-4">Showing latest scores and standings.</div>
+        <div id="sportsContent" class="sports-scroll">
+          <div id="sportsNFL" class="league-panel"></div>
+          <div id="sportsNBA" class="league-panel hidden"></div>
+          <div id="sportsMLB" class="league-panel hidden"></div>
+        </div>
+      </div>
+
       <!-- Bitcoin Chart -->
       <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-2">
         <h2 class="text-xl font-semibold mb-4">₿ Bitcoin (1 day minutely)</h2>
@@ -61,11 +83,6 @@
         <div id="aiNews" class="space-y-3"></div>
       </div>
 
-      <!-- YouTube Topics -->
-      <div class="bg-zinc-900 rounded-2xl p-6 lg:col-span-3">
-        <h2 class="text-xl font-semibold mb-4">▶️ Topic Videos</h2>
-        <div id="youtubeVideos" class="space-y-6"></div>
-      </div>
     </div>
   </div>
 
